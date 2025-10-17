@@ -2,6 +2,11 @@
 
 {% block content %}
     <article class="post">
+        <aside class="actions">
+            <a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-secondary">
+                {% include './icons/pencil-fill.svg' %}
+            </a>
+        </aside>
         {% if post_published_date %}
         <time class="date">
             {{ post_published_date }}
